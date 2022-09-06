@@ -26,7 +26,7 @@ function toggleMobileMenu() {
 
 // Shopping cart menu
 const shoppingCart = document.querySelector('.navbar-shopping-cart');
-const menuCartIcon = document.querySelector('.product-detail');
+const menuCartIcon = document.querySelector('#shoppingCardContainer');
 shoppingCart.addEventListener('click', toggleShoppingCartMenu);
 function toggleShoppingCartMenu() {
     const isMobileMenuClose = mobileMenu.classList.contains('inactive');
@@ -71,7 +71,7 @@ function renderProducts(arrObject){
         
         const productInfoFigure = document.createElement('figure');
         const productFigureImgCart = document.createElement('img');
-        productFigureImgCart.setAttribute('img', '../icons/bt_add_to_cart.svg');
+        productFigureImgCart.setAttribute('src', '../icons/bt_add_to_cart.svg');
     
         productInfoFigure.appendChild(productFigureImgCart);
         productInfoDiv.append(productPrice, productName);
